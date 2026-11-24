@@ -315,8 +315,10 @@ schema extensions`.
 26. `git add` warned that ~95 files will be converted LF→CRLF on a Windows
     checkout (no `.gitattributes` in the repo). Consider adding one to stop
     line-ending churn between Windows and Linux contributors.
-27. No remote or CI run existed at handoff time; every result in section 7 is
-    from this machine only.
+27. Every database/RLS result in section 7 comes from this machine only.
+    GitHub Actions now runs the static checks on each push (section 7), but no
+    environment — local or CI — has ever executed the database or the RLS
+    suite.
 28. Sentry/PostHog variables are declared but no monitoring is wired.
 
 ### Documentation drift
@@ -474,19 +476,27 @@ the npm scripts.
 | Database: `search_opportunities`                                   | returned rows for `en` and `uz` with the expected titles                                                                                                |
 | Database: guest checks via `set role anon`                         | published rows visible; drafts, staff tables and writes denied                                                                                          |
 
-Not run, therefore unverified: `npm run supabase:start`, `npm run db:reset`,
-`npm run db:types`, `tests/rls.test.ts` (always skipped), any GitHub Actions
-run, any browser/E2E test, and any device/visual review.
+Not run on this machine, therefore unverified locally: `npm run supabase:start`,
+`npm run db:reset`, `npm run db:types`, `tests/rls.test.ts` (always skipped),
+any browser/E2E test, and any device/visual review.
+
+GitHub Actions **did** run after the handoff push. Workflow `CI` ran on every
+push to `main` — several times, because the docs commit was amended — and every
+completed run finished with conclusion `success` on a GitHub-hosted
+`ubuntu-latest` runner: the same typecheck/lint/i18n/unit-test steps above, plus
+`next build`. That is the first CI evidence for this codebase; it does not test
+the database or RLS either.
 
 ## 8. Repository state and suggested next steps
 
 - Remote: `https://github.com/Quvonchbek01/TopImkon.uz` (public, default branch
   `main`), created before this handoff and empty at that point.
-- First and only commit at handoff: `31c9e74 chore: Stage 1 + Stage 2 handoff`
-  (97 files, 16749 insertions), author `Quvonchbek01
-<Quvonchbek01@users.noreply.github.com>` (no git identity was configured on
-  the machine, so the GitHub noreply address was used; amend it if you want a
-  real address).
+- Commits pushed by this handoff (`git log`): the root commit `31c9e74` holds
+  the whole tree (97 files, 16749 insertions); two small docs commits follow it
+  and only touch this file. `main` tracks `origin/main`.
+- Author identity: `Quvonchbek01 <Quvonchbek01@users.noreply.github.com>`; no git
+  identity was configured on the machine, so the GitHub noreply address was
+  used. Amend the commits if you want a real address on the history.
 - The push was done with a personal access token supplied interactively; that
   token is not stored in `.git/config` and must be revoked by its owner. Do not
   reuse it.
