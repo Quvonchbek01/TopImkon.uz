@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Typecheck, lint, i18n, tests, build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    env:
+      # Public variables only; real secrets never live in the repository.
+      NEXT_PUBLIC_SITE_URL: https://topimkon.uz
+      NEXT_TELEMETRY_DISABLED: '1'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Message file keys
+        run: npm run i18n:check
+
+      - name: Unit tests
+        run: npm run test
+
+      - name: Prettier check
+        run: npm run format:check
+
+      - name: Build
+        run: npm run build

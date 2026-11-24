@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+@import '../styles/tokens.css';
+
+/* Manual theme switching: DESIGN.md section 2.6. The theme toggle writes
+   `data-theme="light|dark"` on <html> before first paint. */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    min-height: 100dvh;
+  }
+
+  /* Visible focus everywhere (DESIGN.md section 6.1). */
+  :focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  /* Respect prefers-reduced-motion (DESIGN.md section 8). */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

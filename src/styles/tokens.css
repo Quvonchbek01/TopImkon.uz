@@ -1,0 +1,283 @@
+/* TopImkon.uz design tokens.
+   Source of truth: DESIGN.md sections 2 and 10.
+   Components must never use raw hex values — use the mapped Tailwind utilities. */
+
+:root {
+  color-scheme: light;
+
+  /* 2.1 Core palette (light mode) */
+  --orange-500: #ff8a33;
+  --orange-600: #c2570a;
+  --orange-700: #b84e06;
+  --apricot-400: #ffb982;
+  --peach-100: #ffe6d0;
+  --peach-50: #fff3e8;
+  --cream-25: #fffaf4;
+  --surface: #ffffff;
+  --espresso-900: #2b1608;
+  --cocoa-700: #5a2e12;
+  --brown-500: #6b5545;
+  --sand-200: #ebdccb;
+  --sand-100: #f5ebdd;
+
+  /* 2.2 Harmonizing palette */
+  --teal-700: #0e5a6b;
+  --teal-500: #1b8a9c;
+  --teal-100: #ddf0f3;
+  --sunflower-400: #ffc53d;
+  --sunflower-100: #fff3cc;
+  --sunflower-800: #7a5300;
+  --plum-600: #7a3e7a;
+  --plum-100: #f3e4f3;
+  --berry-600: #d6264a;
+  --berry-100: #fde3e9;
+
+  /* 2.4 Semantic tokens */
+  --background: var(--cream-25);
+  --foreground: var(--espresso-900);
+  --surface-raised: var(--surface);
+  --card: var(--surface);
+  --card-foreground: var(--espresso-900);
+  --popover: var(--surface);
+  --popover-foreground: var(--espresso-900);
+  --muted: var(--sand-100);
+  --muted-foreground: var(--brown-500);
+  --border: var(--sand-200);
+  --input: var(--sand-200);
+  --ring: var(--teal-500);
+  --primary: var(--orange-500);
+  --primary-foreground: var(--espresso-900);
+  --primary-hover: var(--orange-600);
+  --primary-hover-foreground: #ffffff;
+  --secondary: var(--teal-100);
+  --secondary-foreground: var(--teal-700);
+  --accent: var(--peach-50);
+  --accent-foreground: var(--espresso-900);
+  --destructive: var(--berry-600);
+  --destructive-foreground: #ffffff;
+  --success: var(--teal-500);
+  --success-foreground: var(--teal-700);
+  --warning-bg: var(--sunflower-100);
+  --warning-fg: var(--sunflower-800);
+  --info-bg: var(--teal-100);
+  --info-fg: var(--teal-700);
+
+  /* Inverted surface (footer, toasts). Fixed colours so text stays readable in
+     both themes, where `--espresso-900` and `--cream-25` are flipped. */
+  --inverse: var(--espresso-900);
+  --inverse-foreground: var(--cream-25);
+  --inverse-muted: #c9b3a0;
+  --inverse-accent: var(--orange-500);
+
+  /* Opportunity type tag colours (DESIGN.md 2.5), themed for AA contrast. */
+  --tag-orange-bg: var(--peach-100);
+  --tag-orange-fg: var(--orange-700);
+  --tag-teal-bg: var(--teal-100);
+  --tag-teal-fg: var(--teal-700);
+  --tag-sunflower-bg: var(--sunflower-100);
+  --tag-sunflower-fg: var(--sunflower-800);
+  --tag-plum-bg: var(--plum-100);
+  --tag-plum-fg: var(--plum-600);
+  --tag-espresso-bg: var(--sand-100);
+  --tag-espresso-fg: var(--espresso-900);
+  --tag-berry-bg: var(--berry-100);
+  --tag-berry-fg: var(--berry-600);
+
+  /* Deadline urgency (DESIGN.md 2.4). */
+  --deadline-urgent-bg: var(--berry-100);
+  --deadline-urgent-fg: var(--berry-600);
+  --deadline-soon-bg: var(--peach-100);
+  --deadline-soon-fg: var(--orange-700);
+  --deadline-warning-bg: var(--sunflower-100);
+  --deadline-warning-fg: var(--sunflower-800);
+  --deadline-far-bg: var(--sand-100);
+  --deadline-far-fg: var(--brown-500);
+
+  /* 4. Elevation (soft and warm tinted). Radius values live in the @theme block. */
+  --elev-card: 0 2px 8px rgba(43, 22, 8, 0.06);
+  --elev-raised: 0 8px 24px rgba(43, 22, 8, 0.1);
+}
+
+/* 2.6 Dark mode — applied by the theme toggle (`data-theme="dark"` on <html>). */
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --background: #1a100a;
+  --surface: #251912;
+  --surface-raised: #30221a;
+  --border: #4a382c;
+  --input: #4a382c;
+  --foreground: #fbefe3;
+  --muted: #2f2118;
+  --muted-foreground: #c9b3a0;
+
+  --primary: #ffa05a;
+  --primary-foreground: #2b1608;
+  --primary-hover: #ffb27a;
+  --primary-hover-foreground: #2b1608;
+
+  --secondary: #123b45;
+  --secondary-foreground: #5cc0d0;
+  --accent: #2a1b11;
+  --accent-foreground: #fbefe3;
+
+  --teal-500: #5cc0d0;
+  --teal-700: #5cc0d0;
+  --teal-100: #123b45;
+  --sunflower-400: #ffd36b;
+  --sunflower-100: #3a2f10;
+  --sunflower-800: #ffd36b;
+  --berry-600: #ff6b88;
+  --berry-100: #3d1220;
+  --plum-600: #c99ac9;
+  --plum-100: #332033;
+  --peach-50: #2a1b11;
+  --peach-100: #3a2415;
+  --sand-100: #2f2118;
+  --sand-200: #4a382c;
+  --cream-25: #1a100a;
+
+  --card: var(--surface);
+  --card-foreground: #fbefe3;
+  --popover: var(--surface-raised);
+  --popover-foreground: #fbefe3;
+
+  --ring: #5cc0d0;
+  --success: #5cc0d0;
+  --success-foreground: #5cc0d0;
+  --warning-bg: #3a2f10;
+  --warning-fg: #ffd36b;
+  --info-bg: #123b45;
+  --info-fg: #5cc0d0;
+
+  --inverse: #140b06;
+  --inverse-foreground: #fbefe3;
+  --inverse-muted: #c9b3a0;
+  --inverse-accent: #ffa05a;
+
+  --tag-orange-bg: #3a2415;
+  --tag-orange-fg: #ffb27a;
+  --tag-teal-bg: #123b45;
+  --tag-teal-fg: #5cc0d0;
+  --tag-sunflower-bg: #3a2f10;
+  --tag-sunflower-fg: #ffd36b;
+  --tag-plum-bg: #332033;
+  --tag-plum-fg: #c99ac9;
+  --tag-espresso-bg: #2f2118;
+  --tag-espresso-fg: #fbefe3;
+  --tag-berry-bg: #3d1220;
+  --tag-berry-fg: #ff6b88;
+
+  --deadline-urgent-bg: #3d1220;
+  --deadline-urgent-fg: #ff6b88;
+  --deadline-soon-bg: #3a2415;
+  --deadline-soon-fg: #ffb27a;
+  --deadline-warning-bg: #3a2f10;
+  --deadline-warning-fg: #ffd36b;
+  --deadline-far-bg: #2f2118;
+  --deadline-far-fg: #c9b3a0;
+  --destructive: #ff6b88;
+  --destructive-foreground: #2b1608;
+
+  --elev-card: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --elev-raised: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* Tailwind mapping. `inline` keeps each generated utility pointing at the
+   variables above, so the dark-mode override on <html> keeps working. */
+@theme inline {
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-hover-foreground: var(--primary-hover-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning-bg: var(--warning-bg);
+  --color-warning-fg: var(--warning-fg);
+  --color-info-bg: var(--info-bg);
+  --color-info-fg: var(--info-fg);
+
+  --color-inverse: var(--inverse);
+  --color-inverse-foreground: var(--inverse-foreground);
+  --color-inverse-muted: var(--inverse-muted);
+  --color-inverse-accent: var(--inverse-accent);
+
+  --color-tag-orange-bg: var(--tag-orange-bg);
+  --color-tag-orange-fg: var(--tag-orange-fg);
+  --color-tag-teal-bg: var(--tag-teal-bg);
+  --color-tag-teal-fg: var(--tag-teal-fg);
+  --color-tag-sunflower-bg: var(--tag-sunflower-bg);
+  --color-tag-sunflower-fg: var(--tag-sunflower-fg);
+  --color-tag-plum-bg: var(--tag-plum-bg);
+  --color-tag-plum-fg: var(--tag-plum-fg);
+  --color-tag-espresso-bg: var(--tag-espresso-bg);
+  --color-tag-espresso-fg: var(--tag-espresso-fg);
+  --color-tag-berry-bg: var(--tag-berry-bg);
+  --color-tag-berry-fg: var(--tag-berry-fg);
+
+  --color-deadline-urgent-bg: var(--deadline-urgent-bg);
+  --color-deadline-urgent-fg: var(--deadline-urgent-fg);
+  --color-deadline-soon-bg: var(--deadline-soon-bg);
+  --color-deadline-soon-fg: var(--deadline-soon-fg);
+  --color-deadline-warning-bg: var(--deadline-warning-bg);
+  --color-deadline-warning-fg: var(--deadline-warning-fg);
+  --color-deadline-far-bg: var(--deadline-far-bg);
+  --color-deadline-far-fg: var(--deadline-far-fg);
+
+  --color-orange-500: var(--orange-500);
+  --color-orange-600: var(--orange-600);
+  --color-orange-700: var(--orange-700);
+  --color-apricot-400: var(--apricot-400);
+  --color-peach-100: var(--peach-100);
+  --color-peach-50: var(--peach-50);
+  --color-cream-25: var(--cream-25);
+  --color-espresso-900: var(--espresso-900);
+  --color-cocoa-700: var(--cocoa-700);
+  --color-brown-500: var(--brown-500);
+  --color-sand-100: var(--sand-100);
+  --color-sand-200: var(--sand-200);
+  --color-teal-700: var(--teal-700);
+  --color-teal-500: var(--teal-500);
+  --color-teal-100: var(--teal-100);
+  --color-sunflower-400: var(--sunflower-400);
+  --color-sunflower-100: var(--sunflower-100);
+  --color-sunflower-800: var(--sunflower-800);
+  --color-plum-600: var(--plum-600);
+  --color-plum-100: var(--plum-100);
+  --color-berry-600: var(--berry-600);
+  --color-berry-100: var(--berry-100);
+
+  /* 4. Shape */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-sheet: 24px;
+
+  /* 4. Elevation */
+  --shadow-card: var(--elev-card);
+  --shadow-raised: var(--elev-raised);
+
+  --breakpoint-xs: 22.5rem; /* 360px — mobile-first base */
+}

@@ -1,0 +1,201 @@
+{
+  "common": {
+    "skipToContent": "Asosiy kontentga oʻtish",
+    "loading": "Yuklanmoqda…",
+    "errorTitle": "Xatolik yuz berdi",
+    "errorBody": "Sahifani yuklab boʻlmadi. Internetni tekshirib, qayta urinib koʻring.",
+    "retry": "Qayta urinish",
+    "notFoundTitle": "Sahifa topilmadi",
+    "notFoundBody": "Bu manzil mavjud emas yoki koʻchirilgan.",
+    "backHome": "Bosh sahifaga qaytish",
+    "stageNote": "Bu sahifada hozircha faqat tuzilma bor. Mazmun keyingi bosqichlarda qoʻshiladi."
+  },
+  "nav": {
+    "primary": "Asosiy navigatsiya",
+    "home": "Bosh sahifa",
+    "explore": "Imkoniyatlar",
+    "forYou": "Siz uchun",
+    "saved": "Saqlanganlar",
+    "profile": "Profil",
+    "tracker": "Arizalar",
+    "alerts": "Bildirishnomalar",
+    "about": "Loyiha haqida",
+    "suggest": "Imkoniyat taklif qilish",
+    "admin": "Boshqaruv",
+    "account": "Hisob menyusi",
+    "login": "Kirish",
+    "menu": "Menyu",
+    "openMenu": "Menyuni ochish",
+    "closeMenu": "Menyuni yopish"
+  },
+  "language": {
+    "label": "Til",
+    "uz": "Oʻzbekcha",
+    "ru": "Русский",
+    "en": "English"
+  },
+  "theme": {
+    "label": "Koʻrinish",
+    "light": "Yorugʻ",
+    "dark": "Qorongʻi",
+    "system": "Tizim",
+    "switchLabel": "Koʻrinishni almashtirish"
+  },
+  "search": {
+    "label": "Qidiruv",
+    "placeholder": "Kasb, dastur yoki davlat",
+    "submit": "Qidirish"
+  },
+  "types": {
+    "internship": "Amaliyot",
+    "summer_school": "Yozgi maktab",
+    "scholarship_bachelor": "Bakalavr stipendiyasi",
+    "scholarship_master": "Magistratura stipendiyasi",
+    "scholarship_phd": "PhD stipendiyasi",
+    "exchange": "Almashinuv dasturi",
+    "fellowship": "Fellowship",
+    "research_program": "Tadqiqot dasturi",
+    "grant": "Grant",
+    "competition": "Tanlov",
+    "conference": "Konferensiya",
+    "volunteering": "Volontyorlik",
+    "job_entry": "Boshlangʻich ish",
+    "course": "Kurs"
+  },
+  "footer": {
+    "tagline": "Oʻzbekistonlik talabalar va yoshlar uchun stipendiyalar, amaliyotlar va boshqa imkoniyatlar.",
+    "navTitle": "Sahifalar",
+    "legalTitle": "Hujjatlar",
+    "about": "Loyiha haqida",
+    "explore": "Imkoniyatlar",
+    "suggest": "Imkoniyat taklif qilish",
+    "privacy": "Maxfiylik siyosati",
+    "terms": "Foydalanish shartlari",
+    "contact": "Aloqa",
+    "copyright": "© {year} TopImkon.uz — barcha imkoniyatlar bir joyda."
+  },
+  "pages": {
+    "home": {
+      "title": "Oʻzingizga mos imkoniyatni toping",
+      "subtitle": "Stipendiyalar, amaliyotlar, almashinuv dasturlari va tanlovlar — Oʻzbekistonlik talabalar va yoshlar uchun bir joyda.",
+      "searchPlaceholder": "Masalan: toʻliq moliyalashtiriladigan magistratura",
+      "exploreCta": "Barcha imkoniyatlar",
+      "signupCta": "Bepul roʻyxatdan oʻtish",
+      "shortcutsTitle": "Turlar boʻyicha qidirish",
+      "howTitle": "Qanday ishlaydi",
+      "howSubtitle": "Uch qadamda oʻzingizga mos imkoniyatni toping.",
+      "step1Title": "Profilni toʻldiring",
+      "step1Body": "Taʼlim darajasi, yoʻnalish va qiziqishlaringizni belgilang.",
+      "step2Title": "Mos imkoniyatlarni oling",
+      "step2Body": "Sizga mos stipendiya, amaliyot va tanlovlar roʻyxati shakllanadi.",
+      "step3Title": "Muddatni oʻtkazib yubormang",
+      "step3Body": "Saqlang, eslatma qoʻying va arizani kuzatib boring.",
+      "closingSoonTitle": "Muddat tugayapti",
+      "closingSoonSubtitle": "Ariza topshirishga oz vaqt qolgan imkoniyatlar.",
+      "closingSoonCta": "Muddat boʻyicha saralash",
+      "featuredTitle": "Tanlangan imkoniyatlar",
+      "featuredSubtitle": "Tahririyat tanlovi: eng foydali va ishonchli eʼlonlar.",
+      "featuredCta": "Barchasini koʻrish",
+      "previewNote": "Real eʼlonlar 3-bosqichda qoʻshiladi, shuning uchun bu yerda hozircha yuklanish koʻrinishi turadi."
+    },
+    "explore": {
+      "title": "Imkoniyatlar",
+      "description": "Eʼlon qilingan barcha imkoniyatlarni qidiring va filtrlang.",
+      "resultsCount": "Topildi: {count} ta imkoniyat",
+      "demoNote": "Hozircha roʻyxat demo maʼlumotlardan iborat, keyingi bosqichda real eʼlonlar qoʻshiladi.",
+      "emptyTitle": "Hozircha imkoniyat yoʻq",
+      "emptyBody": "Bazada eʼlon qilingan imkoniyat topilmadi. Keyinroq qayta tekshirib koʻring.",
+      "setupTitle": "Maʼlumotlar bazasiga ulanib boʻlmadi",
+      "setupBody": "Supabase kalitlarini .env.local fayliga qoʻshing, lokal bazani ishga tushiring va `npm run db:reset` bilan demo maʼlumotlarni yuklang.",
+      "demoBadge": "Demo",
+      "deadlineLabel": "Muddat",
+      "rollingLabel": "Doimiy qabul",
+      "unknownDeadline": "Muddat nomaʼlum",
+      "remoteLabel": "Masofadan",
+      "hybridLabel": "Gibrid",
+      "locationUnknown": "Manzil koʻrsatilmagan"
+    },
+    "forYou": {
+      "title": "Siz uchun",
+      "description": "Profilingizga mos imkoniyatlar shu yerda paydo boʻladi."
+    },
+    "saved": {
+      "title": "Saqlanganlar",
+      "description": "Keyinroq koʻrish uchun saqlagan imkoniyatlaringiz."
+    },
+    "tracker": {
+      "title": "Arizalar",
+      "description": "Arizalaringizni bosqichlar boʻyicha kuzatib boring."
+    },
+    "alerts": {
+      "title": "Bildirishnomalar",
+      "description": "Saqlangan qidiruvlar va eslatma sozlamalari."
+    },
+    "profile": {
+      "title": "Profil",
+      "description": "Maʼlumotlaringiz, tillar, qiziqishlar va koʻrinish sozlamalari."
+    },
+    "onboarding": {
+      "title": "Tanishuv",
+      "description": "Toʻrt qisqa qadamda profilingizni toʻldiring."
+    },
+    "login": {
+      "title": "Kirish",
+      "description": "Hisobingizga email yoki Google orqali kiring."
+    },
+    "signup": {
+      "title": "Roʻyxatdan oʻtish",
+      "description": "Bepul hisob yaratib, shaxsiy tavsiyalarni oling."
+    },
+    "reset": {
+      "title": "Parolni tiklash",
+      "description": "Email manzilingizga parolni tiklash havolasini yuboramiz."
+    },
+    "suggest": {
+      "title": "Imkoniyat taklif qilish",
+      "description": "Bilgan imkoniyatingizni yuboring — admin tekshirib eʼlon qiladi."
+    },
+    "about": {
+      "title": "Loyiha haqida",
+      "description": "TopImkon.uz nima uchun va kim uchun yaratilgan."
+    },
+    "privacy": {
+      "title": "Maxfiylik siyosati",
+      "description": "Qanday maʼlumot yigʻamiz va undan qanday foydalanamiz."
+    },
+    "terms": {
+      "title": "Foydalanish shartlari",
+      "description": "Saytdan foydalanish qoidalari."
+    },
+    "contact": {
+      "title": "Aloqa",
+      "description": "Savol va takliflar uchun bogʻlanish maʼlumotlari."
+    },
+    "admin": {
+      "title": "Boshqaruv paneli",
+      "description": "Eʼlonlarni qoʻshish, tekshirish va nashr qilish."
+    },
+    "opportunity": {
+      "title": "Imkoniyat",
+      "description": "Imkoniyat haqida toʻliq maʼlumot shu sahifada boʻladi."
+    },
+    "devDesign": {
+      "title": "Dizayn tizimi",
+      "description": "Tokenlar va komponentlarni tekshirish sahifasi. Ishga tushirishdan oldin yopiladi."
+    }
+  },
+  "dev": {
+    "warning": "Bu sahifa faqat ishlab chiqish uchun. Ishga tushirishdan oldin oʻchiriladi.",
+    "paletteCore": "Asosiy palitra",
+    "paletteAccent": "Uygʻun ranglar",
+    "semanticTitle": "Semantik holatlar",
+    "typographyTitle": "Shrift shkalasi",
+    "glyphTitle": "Oʻzbek harflari testi",
+    "glyphNote": "Quyidagi matnda oʻ, gʻ va ʼ belgilari bir xil shriftda, uzilishsiz koʻrinishi kerak.",
+    "buttonsTitle": "Tugmalar",
+    "badgesTitle": "Belgilar",
+    "cardsTitle": "Kartochka",
+    "skeletonsTitle": "Yuklanish holatlari",
+    "themeTitle": "Koʻrinish"
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "common": {
+    "skipToContent": "Skip to main content",
+    "loading": "Loading…",
+    "errorTitle": "Something went wrong",
+    "errorBody": "The page could not be loaded. Check your connection and try again.",
+    "retry": "Try again",
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "This address does not exist or has been moved.",
+    "backHome": "Back to home",
+    "stageNote": "This page is only a skeleton for now. Content arrives in later stages."
+  },
+  "nav": {
+    "primary": "Main navigation",
+    "home": "Home",
+    "explore": "Explore",
+    "forYou": "For you",
+    "saved": "Saved",
+    "profile": "Profile",
+    "tracker": "Tracker",
+    "alerts": "Alerts",
+    "about": "About",
+    "suggest": "Suggest an opportunity",
+    "admin": "Admin",
+    "account": "Account menu",
+    "login": "Log in",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "language": {
+    "label": "Language",
+    "uz": "Oʻzbekcha",
+    "ru": "Русский",
+    "en": "English"
+  },
+  "theme": {
+    "label": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "switchLabel": "Switch theme"
+  },
+  "search": {
+    "label": "Search",
+    "placeholder": "Field, programme or country",
+    "submit": "Search"
+  },
+  "types": {
+    "internship": "Internship",
+    "summer_school": "Summer school",
+    "scholarship_bachelor": "Bachelor's scholarship",
+    "scholarship_master": "Master's scholarship",
+    "scholarship_phd": "PhD scholarship",
+    "exchange": "Exchange programme",
+    "fellowship": "Fellowship",
+    "research_program": "Research programme",
+    "grant": "Grant",
+    "competition": "Competition",
+    "conference": "Conference",
+    "volunteering": "Volunteering",
+    "job_entry": "Entry-level job",
+    "course": "Course"
+  },
+  "footer": {
+    "tagline": "Scholarships, internships and other opportunities for students and young people from Uzbekistan.",
+    "navTitle": "Pages",
+    "legalTitle": "Documents",
+    "about": "About",
+    "explore": "Explore",
+    "suggest": "Suggest an opportunity",
+    "privacy": "Privacy policy",
+    "terms": "Terms of use",
+    "contact": "Contact",
+    "copyright": "© {year} TopImkon.uz — every opportunity in one place."
+  },
+  "pages": {
+    "home": {
+      "title": "Find the opportunity that actually fits you",
+      "subtitle": "Scholarships, internships, exchange programmes and competitions — in one place for students and young people from Uzbekistan.",
+      "searchPlaceholder": "For example: fully funded master's degree",
+      "exploreCta": "Browse all opportunities",
+      "signupCta": "Create a free account",
+      "shortcutsTitle": "Browse by type",
+      "howTitle": "How it works",
+      "howSubtitle": "Find the opportunity that fits you in three steps.",
+      "step1Title": "Fill in your profile",
+      "step1Body": "Set your study level, field and interests.",
+      "step2Title": "Get matching opportunities",
+      "step2Body": "We build a list of scholarships, internships and competitions for you.",
+      "step3Title": "Never miss a deadline",
+      "step3Body": "Save listings, set reminders and follow every application.",
+      "closingSoonTitle": "Closing soon",
+      "closingSoonSubtitle": "Opportunities with little time left to apply.",
+      "closingSoonCta": "Sort by deadline",
+      "featuredTitle": "Featured opportunities",
+      "featuredSubtitle": "Editor's picks: the most useful and reliable listings.",
+      "featuredCta": "See all",
+      "previewNote": "Real listings arrive in Stage 3, so a loading preview is shown here for now."
+    },
+    "explore": {
+      "title": "Explore",
+      "description": "Search and filter every published opportunity.",
+      "resultsCount": "Results: {count}",
+      "demoNote": "The list currently contains demo data; real listings arrive in the next stage.",
+      "emptyTitle": "No opportunities yet",
+      "emptyBody": "No published opportunity was found. Check again later.",
+      "setupTitle": "Could not reach the database",
+      "setupBody": "Add the Supabase keys to .env.local, start the local stack and load the demo rows with `npm run db:reset`.",
+      "demoBadge": "Demo",
+      "deadlineLabel": "Deadline",
+      "rollingLabel": "Rolling",
+      "unknownDeadline": "No fixed deadline",
+      "remoteLabel": "Remote",
+      "hybridLabel": "Hybrid",
+      "locationUnknown": "Location not stated"
+    },
+    "forYou": {
+      "title": "For you",
+      "description": "Opportunities that match your profile will appear here."
+    },
+    "saved": {
+      "title": "Saved",
+      "description": "Opportunities you saved to look at later."
+    },
+    "tracker": {
+      "title": "Tracker",
+      "description": "Follow the stages of every application you sent."
+    },
+    "alerts": {
+      "title": "Alerts",
+      "description": "Saved searches and reminder settings."
+    },
+    "profile": {
+      "title": "Profile",
+      "description": "Your details, languages, interests and theme settings."
+    },
+    "onboarding": {
+      "title": "Getting started",
+      "description": "Complete your profile in four short steps."
+    },
+    "login": {
+      "title": "Log in",
+      "description": "Sign in with email or Google."
+    },
+    "signup": {
+      "title": "Sign up",
+      "description": "Create a free account and get personal recommendations."
+    },
+    "reset": {
+      "title": "Reset password",
+      "description": "We will email you a link to reset your password."
+    },
+    "suggest": {
+      "title": "Suggest an opportunity",
+      "description": "Send us an opportunity you know — an admin will verify and publish it."
+    },
+    "about": {
+      "title": "About",
+      "description": "Why TopImkon.uz exists and who it is for."
+    },
+    "privacy": {
+      "title": "Privacy policy",
+      "description": "What data we collect and how we use it."
+    },
+    "terms": {
+      "title": "Terms of use",
+      "description": "The rules for using this site."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "How to reach us with questions and suggestions."
+    },
+    "admin": {
+      "title": "Admin panel",
+      "description": "Add, verify and publish listings."
+    },
+    "opportunity": {
+      "title": "Opportunity",
+      "description": "The full details of an opportunity will appear on this page."
+    },
+    "devDesign": {
+      "title": "Design system",
+      "description": "A page for checking tokens and components. It is switched off before launch."
+    }
+  },
+  "dev": {
+    "warning": "This page is for development only. It is disabled before launch.",
+    "paletteCore": "Core palette",
+    "paletteAccent": "Harmonizing colours",
+    "semanticTitle": "Semantic states",
+    "typographyTitle": "Type scale",
+    "glyphTitle": "Uzbek glyph test",
+    "glyphNote": "The characters oʻ, gʻ and ʼ below must render in one font, with no fallback.",
+    "buttonsTitle": "Buttons",
+    "badgesTitle": "Badges",
+    "cardsTitle": "Card",
+    "skeletonsTitle": "Loading states",
+    "themeTitle": "Theme"
+  }
+}
