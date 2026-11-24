@@ -480,11 +480,28 @@ run, any browser/E2E test, and any device/visual review.
 
 ## 8. Repository state and suggested next steps
 
-At the moment of handoff the folder was initialised as a git repository
-(branch `main`) with a single initial commit containing the state described
-above. There was no repository or CI run before that; the remote is recorded
-in the summary of the handoff session. `.env.local` is absent and no secrets
-are committed.
+- Remote: `https://github.com/Quvonchbek01/TopImkon.uz` (public, default branch
+  `main`), created before this handoff and empty at that point.
+- First and only commit at handoff: `31c9e74 chore: Stage 1 + Stage 2 handoff`
+  (97 files, 16749 insertions), author `Quvonchbek01
+<Quvonchbek01@users.noreply.github.com>` (no git identity was configured on
+  the machine, so the GitHub noreply address was used; amend it if you want a
+  real address).
+- The push was done with a personal access token supplied interactively; that
+  token is not stored in `.git/config` and must be revoked by its owner. Do not
+  reuse it.
+- `.env.local` is absent and no secrets are committed (verified before the
+  push: `node_modules`, `.env.local`, `supabase/.temp`, `.next` are ignored).
+- Line endings: the commit was made on Windows and `git add` warned that ~95
+  files will be checked out as CRLF. There is no `.gitattributes`, so a Linux
+  contributor will see no-op diffs after editing.
+- **Unrelated older repositories by the same author** exist and contain an
+  earlier implementation of the same product (Next.js 14, `schema.sql` +
+  `stage4.sql` instead of numbered migrations, Playwright, grammY bot):
+  `Quvonchbek01/TopImkon` and `Quvonchbek01/topimkon-web`. They were **not**
+  audited, are not this codebase and were not touched. Treat this repository
+  (`TopImkon.uz`) as the current one, but read the old repos before repeating
+  work — they may already contain Stage 4–7 attempts.
 
 Suggested order for the next engineer:
 
